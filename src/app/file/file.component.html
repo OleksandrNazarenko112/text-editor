@@ -1,0 +1,8 @@
+<app-suggestions [synonym]="selectedWord"></app-suggestions>
+<div class="file" *ngFor="let item of (text$ | async)">
+  <div contenteditable="true"
+       [id]="item.id"
+       [innerHtml] ="item.text"
+       (dblclick)="getSelection(item.id)" ></div>
+</div>
+
